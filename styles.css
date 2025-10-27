@@ -1,0 +1,381 @@
+
+      /* Global and Nav Styles */
+      body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.sub-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.sub-nav a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.sub-nav a.specs-link {
+  color: #fff;
+}
+
+.btn-buy {
+  background: #f9a825;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Hero Section (Video Background) */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.btn-video-demo {
+  background: #f9a825;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+/* Video Modal Styling */
+#videoModal .modal-content {
+  background-color: #000;
+  border: none;
+}
+
+/* NEW Custom class for optimal video modal sizing */
+.responsive-video-modal {
+  max-width: 95%; /* Use most of the screen width */
+  margin: 1.75rem auto;
+}
+@media (min-width: 992px) {
+  .responsive-video-modal {
+    max-width: 1200px; /* Maximize size on desktop */
+  }
+}
+@media (max-width: 991px) {
+  .responsive-video-modal {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+  #videoModal .modal-content {
+    border-radius: 8px;
+  }
+  #videoModal .modal-header {
+    padding: 0.5rem;
+  }
+}
+
+/* This container ensures the YouTube video maintains a 16:9 aspect ratio */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Base Feature Section Styles (Image background with text overlay) */
+.feature-section,
+.overlay-section,
+.centered-feature-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.feature-section img,
+.overlay-section img,
+.centered-feature-section img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Text Blocks (Transparent Background on Desktop) */
+.feature-text,
+.overlay-text,
+.centered-text {
+  position: absolute;
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff;
+  background: transparent;
+  text-shadow: none;
+  z-index: 10;
+}
+
+.feature-text {
+  /* Left Block */
+  top: 25%;
+  left: 8%;
+  width: 450px;
+}
+
+.overlay-text {
+  /* Right Block */
+  top: 25%;
+  right: 8%;
+  width: 450px;
+}
+
+.centered-text {
+  /* Center Block */
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  text-align: center;
+}
+
+.feature-text h1,
+.overlay-text h1,
+.centered-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.feature-text p,
+.overlay-text p,
+.centered-text p {
+  font-size: 1.3rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.overlay-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Multi-Column Feature Section Styling */
+.craftsmanship-section {
+  background-color: #000;
+  padding: 80px 50px;
+  text-align: center;
+}
+.craftsmanship-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.craftsmanship-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.craftsmanship-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  padding: 0 10px;
+}
+
+/* Specs Section Styling */
+.specs-section {
+  background-color: #111;
+  padding: 80px 50px;
+  text-align: left;
+}
+.specs-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.specs-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.specs-section ul li {
+  border-bottom: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+/* Landscape orientation specific styles */
+@media (max-width: 992px) and (orientation: landscape) {
+  .video-container {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    width: 150vw; /* Make video wider than viewport */
+    height: 1700vh; /* Make video taller than viewport */
+    min-width: 150vw;
+    min-height: 150vh;
+    transform: translate(-50%, -50%) scale(1.2); /* Scale up the video */
+    object-fit: cover;
+  }
+
+  .overlay-content {
+    padding: 0 0px;
+    width: 100%;
+    max-width: 800px; /* Increased from 600px */
+  }
+
+  .overlay-content h1 {
+    font-size: 2.5rem; /* Increased from 1.8rem */
+    margin-bottom: 12px;
+  }
+
+  .overlay-content p {
+    font-size: 1.3rem; /* Increased from 1rem */
+    margin-bottom: 15px;
+  }
+
+  .btn-video-demo {
+    padding: 10px 30px; /* Increased padding */
+    font-size: 1.1rem; /* Increased from 0.9rem */
+    margin-top: 15px;
+  }
+}
+
+/* Portrait and default mobile styles */
+@media (max-width: 992px) {
+  .sub-nav {
+    padding: 15px 20px;
+  }
+
+  .video-container {
+    height: 50vh; /* Reduced from 60vh */
+  }
+
+  .video-container iframe {
+    height: 50vh; /* Reduced from 60vh */
+  }
+
+  .feature-section,
+  .overlay-section,
+  .centered-feature-section {
+    min-height: auto;
+    display: block;
+  }
+
+  .feature-section img,
+  .overlay-section img,
+  .centered-feature-section img {
+    height: 45vh; /* Reduced from 50vh */
+  }
+
+  .feature-text,
+  .overlay-text,
+  .centered-text {
+    position: static;
+    transform: none;
+    width: auto;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    padding: 20px 15px; /* Reduced from 30px 20px */
+    text-align: center;
+  }
+
+  .feature-text h1,
+  .overlay-text h1,
+  .centered-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-text p,
+  .overlay-text p,
+  .centered-text p {
+    font-size: 1.1rem;
+  }
+
+  .overlay-text ul {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1.1rem;
+  }
+
+  .craftsmanship-section {
+    padding: 40px 20px;
+  }
+  .craftsmanship-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .specs-section {
+    padding: 40px 20px;
+  }
+  .specs-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .specs-section ul {
+    padding-left: 40px;
+    font-size: 1rem;
+  }
+}
