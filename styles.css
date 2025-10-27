@@ -308,11 +308,11 @@
   }
 
   .video-container {
-    height: 50vh; /* Reduced from 60vh */
+    height: 30vh; /* Reduced from 60vh */
   }
 
   .video-container iframe {
-    height: 50vh; /* Reduced from 60vh */
+    height: 30vh; /* Reduced from 60vh */
   }
 
   .feature-section,
